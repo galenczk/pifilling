@@ -1,6 +1,7 @@
 // Import dependencies
 import express from "express";
 import asyncHandler from "express-async-handler";
+import cors from "cors";
 
 // Init express app
 const app = express();
@@ -8,6 +9,7 @@ const PORT = process.env.PORT;
 app.use(express.json);
 app.use(express.urlencoded({ extended: false }));
 
+app.use(cors());
 
 app.post(
   "/pifilling",
