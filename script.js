@@ -2,7 +2,7 @@
 
 async function sendRequest() {
   const response = await fetch("/pifilling", {
-    method: "get",
+    method: "post",
     query: "this is a message"
   })
   if(response.status === 201){
