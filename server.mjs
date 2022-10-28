@@ -1,3 +1,5 @@
+// Import dependencies
+import "dotenv/config";
 import express from "express";
 import asyncHandler from "express-async-handler";
 
@@ -8,7 +10,14 @@ app.use(express.json);
 app.use(express.urlencoded({ extended: false }));
 
 app.post(
-  "/pifilling",
+  "/",
+  asyncHandler(async (req, res) => {
+    res.status(201).json({ Message: "Message received." });
+  })
+);
+
+app.get(
+  "/",
   asyncHandler(async (req, res) => {
     res.status(201).json({ Message: "Message received." });
   })
