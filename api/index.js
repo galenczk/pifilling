@@ -8,7 +8,15 @@ const PORT = process.env.PORT;
 app.use(express.json);
 app.use(express.urlencoded({ extended: false }));
 
+
 app.post(
+  "/pifilling",
+  asyncHandler(async (req, res) => {
+    res.status(201).json({ Message: "Message received." });
+  })
+);
+
+app.get(
   "/pifilling",
   asyncHandler(async (req, res) => {
     res.status(201).json({ Message: "Message received." });
