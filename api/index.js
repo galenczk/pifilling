@@ -23,8 +23,7 @@ const message = {
 app.post(
   "/api",
   asyncHandler(async (req, res) => {
-    const message = req.body
-    console.log(req.body)
+    console.log("This works")
     res.status(205).json({ Message: "Message received." });
   })
 );
