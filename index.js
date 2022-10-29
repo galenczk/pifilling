@@ -13,7 +13,11 @@ const PORT = process.env.PORT;
 app.use(express.urlencoded({ extended: false }));
 app.use(helmet())
 app.use(bodyParser.json())
-app.use(cors());
+app.use(cors(
+  {
+    methods:
+  }
+));
 app.use(morgan('combined'))
 
 const message = {
