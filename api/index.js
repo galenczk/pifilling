@@ -21,14 +21,14 @@ const message = {
 }
 
 app.post(
-  "/",
+  "/api",
   asyncHandler(async (req, res) => {
     res.status(201).json({ Message: "Message received." });
   })
 );
 
 app.get(
-  "/",
+  "/api",
   asyncHandler(async (req, res) => {
     res.status(201).json({ Message: "Message received." });
   })
