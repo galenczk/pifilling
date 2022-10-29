@@ -24,7 +24,7 @@ app.post(
   "/api",
   asyncHandler(async (req, res) => {
     const message = req.body
-    console.log(message)
+    console.log(req.body)
     res.status(205).json({ Message: "Message received." });
   })
 );
