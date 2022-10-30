@@ -2,28 +2,39 @@
 import express from "express";
 import asyncHandler from "express-async-handler";
 import cors from "cors";
+import QuickChart from "quickchart-js";
 //import bodyParser from "body-parser";
-//import helmet from "helmet";
-//import morgan from "morgan";
+
 
 // Init express app
 const app = express();
 const PORT = process.env.PORT;
 //app.use(express.json);
 //app.use(express.urlencoded({ extended: false }));
-//app.use(helmet())
 //app.use(bodyParser.json())
 app.use(cors());
-//app.use(morgan('combined'))
 
 const message = {
   title: "This is a message from Galen!"
 }
 
+
+// Chart logic
+const newChart = new QuickChart()
+
+newChart.setConfig({
+  type: "pie",
+  data: { labels: ['Hello world', 'Foo bar'], datasets: [{ label: 'Foo', data: [1, 2] }] }
+}) 
+
+
+
+
+// Route handlers
 app.post(
   "/api",
   asyncHandler(async (req, res) => {
-    res.status(205).json({ Message: "Message received." });
+    res.status(205).send(newChart.getUrl);
   })
 );
 
