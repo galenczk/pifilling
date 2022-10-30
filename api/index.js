@@ -1,7 +1,7 @@
 // Import dependencies
 import express from "express";
 import asyncHandler from "express-async-handler";
-//import cors from "cors";
+import cors from "cors";
 //import bodyParser from "body-parser";
 //import helmet from "helmet";
 //import morgan from "morgan";
@@ -13,7 +13,7 @@ const PORT = process.env.PORT;
 //app.use(express.urlencoded({ extended: false }));
 //app.use(helmet())
 //app.use(bodyParser.json())
-//app.use(cors());
+app.use(cors());
 //app.use(morgan('combined'))
 
 const message = {
