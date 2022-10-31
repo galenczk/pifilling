@@ -23,12 +23,13 @@ app.post(
     newChart.setConfig(
       
       {
-      type: "doughnut",
+      type: "pie",
       data: req.body,
-      plugins: {
-        datalabels: {
-          display: false,
-          backgroundColor: "#ffffff"
+      options: {
+        plugins: {
+          datalabels: {
+            backgroundColor: "#ffffff"
+          }
         }
       }
 
@@ -37,8 +38,6 @@ app.post(
     }
     
     );
-    newChart.type = "doughnut";
-    console.log(req.body);
     res.status(200).json({ url: newChart.getUrl() });
   })
 );
