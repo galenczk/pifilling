@@ -25,14 +25,15 @@ app.post(
       {
       type: "pie",
       data: req.body,
-      options: {
-        
-          datalabels: {
-            display: false,
-            color: "rgb(250, 250, 250"
-          }
-        
+      plugins: {
+        datalabels: {
+          display: true,
+          backgroundColor: "#ffffff"
+        }
       }
+
+
+
     }
     
     );
