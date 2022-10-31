@@ -15,13 +15,11 @@ app.use(cors());
 // Init chart object
 const newChart = new QuickChart();
 
-
 // POST request with chart settings returns URL of rendered chart
 app.post(
   "/api",
   asyncHandler(async (req, res) => {
     newChart.setConfig(
-      
       {
       type: "pie",
       data: req.body,
@@ -32,11 +30,7 @@ app.post(
           }
         }
       }
-
-
-
     }
-    
     );
     res.status(200).json({ url: newChart.getUrl() });
   })
