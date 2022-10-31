@@ -19,10 +19,14 @@ const newChart = new QuickChart();
 app.post(
   "/api",
   asyncHandler(async (req, res) => {
-    newChart.setConfig({
+    newChart.setConfig(
+      
+      {
       type: "pie",
       data: req.body,
-    });
+    }
+    
+    );
     console.log(req.body);
     res.status(200).json({ url: newChart.getUrl() });
   })
