@@ -15,6 +15,7 @@ app.use(cors());
 // Init chart object
 const newChart = new QuickChart();
 
+
 // POST request with chart settings returns URL of rendered chart
 app.post(
   "/api",
@@ -24,9 +25,18 @@ app.post(
       {
       type: "pie",
       data: req.body,
+      options: {
+        
+          datalabels: {
+            display: false,
+            color: "rgb(250, 250, 250"
+          }
+        
+      }
     }
     
     );
+    newChart.type = "doughnut";
     console.log(req.body);
     res.status(200).json({ url: newChart.getUrl() });
   })

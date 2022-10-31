@@ -9,9 +9,21 @@ To request a chart from the service, please send a POST request with the body
 containing an object in the following format:
 
 {
-  labels: ["[labelOne]", "[labelTwo]", ...],
-  datasets: [{ data: [labelOneValue], [labelTwoValue]] }],
+  labels: ["[firstLabel]", "[secondLabel]", ...],
+  datasets: [{ data: [firstLabelValue], [secondLabelValue], ...] }],
 }
 
 The labels need to be strings.
 The values within the data object need to be integers.
+
+### Example
+
+![Example POST call to the API]()
+
+The above example will result in the following piechart being rendered:
+
+![Example pie chart]()
+
+## Receiving Data
+
+
