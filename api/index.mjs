@@ -27,7 +27,7 @@ app.post(
       data: req.body,
       plugins: {
         datalabels: {
-          display: true,
+          display: false,
           backgroundColor: "#ffffff"
         }
       }
