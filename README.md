@@ -19,7 +19,7 @@ The values within the data object need to be integers.
 
 ### Example
 
-![Example POST call to the API](./README_images/example_POST_call.png?raw=true)
+![Example POST call to the API](/README_images/example_POST_call.png?raw=true)
 
 ## Receiving Data
 
