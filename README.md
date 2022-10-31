@@ -14,6 +14,8 @@ containing an object in the following format:
   datasets: [{ data: [firstLabelValue], [secondLabelValue], ...] }],
 }
 
+The indexing of the labels and data values will be matched (i.e. the first 
+label provided will label the first data value).
 The labels need to be strings.
 The values within the data object need to be integers.
 
@@ -28,11 +30,11 @@ The URL of the rendered pie chart will be contained in the object reference
 
 The console.log statement in the example used above results in the following:
 
-![Returned URL](./README_images/returned_URL.png?raw=true)
+![Returned URL](/README_images/returned_URL.png?raw=true)
 
 By browsing to this URL, the following image is displayed:
 
-![Example pie chart](./README_images/returned_chart.png?raw=true)
+![Example pie chart](/README_images/returned_chart.png?raw=true)
 
 This URL can also be used as the src value for an img tag in a DOM.
 
