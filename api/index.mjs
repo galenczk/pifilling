@@ -23,7 +23,7 @@ app.post(
     newChart.setConfig(
       
       {
-      type: "pie",
+      type: "doughnut",
       data: req.body,
       plugins: {
         datalabels: {
