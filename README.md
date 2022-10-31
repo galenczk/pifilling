@@ -19,7 +19,7 @@ The values within the data object need to be integers.
 
 ### Example
 
-![Example POST call to the API](https://github.com/galenczk/pifilling/tree/main/README_images/example_POST_call.png?raw=true)
+![Example POST call to the API](./README_images/example_POST_call.png?raw=true)
 
 ## Receiving Data
 
@@ -28,7 +28,7 @@ The URL of the rendered pie chart will be contained in the object reference
 
 The console.log statement in the example used above results in the following:
 
-![Returned URL](/README_images/returned_URL.png?raw=true)
+![Returned URL](./README_images/returned_URL.png?raw=true)
 
 By browsing to this URL, the following image is displayed:
 
