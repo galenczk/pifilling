@@ -24,7 +24,22 @@ Values need to be integers.
 
 ### Example
 
-![Example POST call to the API](/README_images/example_POST_call.png)
+```
+onClick={async () => {
+          Axios.post(
+            "https://pifilling.vercel.app/api",
+
+            {
+              labels: ["Groceries", "Entertainment"],
+              datasets: [{ data: [5000, 20] }],
+            }
+
+
+          ).then((res) => {
+            console.log(res.data.url);
+          });
+        }}
+```
 
 ## Receiving Data
 
