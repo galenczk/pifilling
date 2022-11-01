@@ -21,7 +21,7 @@ The values within the data object need to be integers.
 
 ### Example
 
-![Example POST call to the API](/README_images/example_POST_call.png?raw=true)
+![Example POST call to the API](/README_images/example_POST_call.png)
 
 ## Receiving Data
 
@@ -30,7 +30,7 @@ The URL of the rendered pie chart will be contained in the object reference
 
 The console.log statement in the example used above results in the following:
 
-![Returned URL](/README_images/returned_URL.png?raw=true)
+![Returned URL](/README_images/returned_URL.png)
 
 By browsing to this URL, the following image is displayed:
 
@@ -56,7 +56,7 @@ and incorporates these into a Chart.js configuration object.  This object is
 passed to Quickchart-js to generate a URL.  This URL is passed back to the 
 client as a response.
 
-![UML outline of the microservice functionality](/README_images/returned_chart.png?raw=true)
+![UML outline of the microservice functionality](/README_images/UML.png)
 
 ### This seems very complicated, why not simplify?
 
