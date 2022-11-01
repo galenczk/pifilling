@@ -11,15 +11,16 @@ containing an object in the following format:
 
 ```
 {
-  labels: ["[firstLabel]", "[secondLabel]", ...],
-  datasets: [{ data: [firstLabelValue], [secondLabelValue], ...] }],
+  labels: ["firstLabel", "secondLabel"],
+  datasets: [{ data: [firstLabelValue, secondLabelValue] }],
 }
 ```
 
 The indexing of the labels and data values will be matched (i.e. the first 
-label provided will label the first data value).
-The labels need to be strings.
-The values within the data object need to be integers.
+label in the `labels` list will label the first value in the `data` list).
+
+Labels need to be strings.
+Values need to be integers.
 
 ### Example
 
