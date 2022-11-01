@@ -34,9 +34,37 @@ The console.log statement in the example used above results in the following:
 
 By browsing to this URL, the following image is displayed:
 
-![Example pie chart](/README_images/returned_chart.png?raw=true)
+![Example pie chart](/README_images/returned_chart.png)
 
 This URL can also be used as the src value for an img tag in a DOM.
 
+## Very cool and innovative! ...but how does it work?
+
+This microservice relies on a series of dependencies:
+
+- A node library called Chart.js provides the underlying chart rendering 
+functionality.
+
+- An API called Quickchart serves as a wrapper around Chart.js
+
+- Quickchart also has a node library, Quickchart-js, which generates a URL for 
+a Quickchart API call from a Chart.js parameter object.  This is what I use to 
+generate the microservice's response.    
+
+My microservice receives the client's POST request with their chart parameters 
+and incorporates these into a Chart.js configuration object.  This object is 
+passed to Quickchart-js to generate a URL.  This URL is passed back to the 
+client as a response.
+
+![UML outline of the microservice functionality](/README_images/returned_chart.png?raw=true)
+
+### This seems very complicated, why not simplify?
+
+My first idea was to build my own API wrapper around Chart.js, but returning 
+a URL to an image (what my partner needed) proved difficult with this approach.
+
+The implementation described above ends up being very simple, just a little 
+complicated to explain.
+ 
 ## Thank you 
 Please enjoy using this service and direct any questions or comments to ciszekg@oregonstate.edu.
