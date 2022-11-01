@@ -31,7 +31,7 @@ onClick={async () => {
 
             {
               labels: ["Groceries", "Entertainment"],
-              datasets: [{ data: [5000, 20] }],
+              datasets: [{ data: [10, 100] }],
             }
 
 
