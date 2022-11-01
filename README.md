@@ -9,10 +9,12 @@ that can then be included in a webpage, or downloaded as a .PNG file.
 To request a chart from the service, please send a POST request with the body 
 containing an object in the following format:
 
+```
 {
   labels: ["[firstLabel]", "[secondLabel]", ...],
   datasets: [{ data: [firstLabelValue], [secondLabelValue], ...] }],
 }
+```
 
 The indexing of the labels and data values will be matched (i.e. the first 
 label provided will label the first data value).
