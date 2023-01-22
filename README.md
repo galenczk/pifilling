@@ -1,13 +1,13 @@
 # PiFilling - Galen Ciszek's Pie Chart Rendering Microservice for CS361
 
-This microservice allows a user to render a pie chart based on a dataset they 
-send as a POST request.  The service will return the URL of a rendered piechart
+Pifilling is a piechart rendering microservice that I created for Software Engineering I at Oregon State University.  Pifilling is meant to support my class partner Coleton's class project.   
+
+Pifilling allows a user to render a pie chart based on a dataset they send as a POST request.  The service will return the URL of a rendered piechart
 that can then be included in a webpage, or downloaded as a .PNG file.
 
 ## Requesting Data
 
-To request a chart from the service, please send a POST request with the body 
-containing an object in the following format:
+To request a chart from the service, please send a POST request with the body containing an object in the following format:
 
 ```
 {
@@ -16,8 +16,7 @@ containing an object in the following format:
 }
 ```
 
-The indexing of the labels and data values will be matched (i.e. the first 
-label in the `labels` list will label the first value in the `data` list).
+The indexing of the labels and data values will be matched (i.e. the first label in the `labels` list will label the first value in the `data` list).
 
 Labels need to be strings.
 Values need to be integers.
@@ -56,7 +55,7 @@ By browsing to this URL, the following image is displayed:
 
 This URL can also be used as the src value for an img tag in a DOM.
 
-## Very cool and innovative! ...but how does it work?
+## How it works
 
 This microservice relies on a series of dependencies:
 
